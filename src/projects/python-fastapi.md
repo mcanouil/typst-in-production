@@ -1,14 +1,16 @@
 ---
-title: Python & FastAPI example
+title: "Python & FastAPI: running Typst on the server"
 ---
 
-Here is an example that creates a FastAPI `/report` endpoint with a `color` argument that returns a PDF report made with Typst, relying on that parameter for styling.
+Typst can easily be used from any environment, such as a Python web server. Here we'll see an example that creates a FastAPI `/report` endpoint with a `color` argument that returns a PDF report made with Typst, relying on that parameter for styling.
 
 ## Dependencies
 
 Let's start by setting up our environment with [uv](https://docs.astral.sh/uv/):
 
 ```
+mkdir newproject && cd newproject
+
 uv init
 uv add "fastapi[standard]"
 uv add typst
