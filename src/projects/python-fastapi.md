@@ -1,5 +1,5 @@
 ---
-title: "Python & FastAPI: running Typst on the server"
+title: "Python & FastAPI: running Typst on the server"
 ---
 
 Typst can easily be used from any environment, such as a Python web server. Here we'll see an example that creates a FastAPI `/report` endpoint with a `color` argument that returns a PDF report made with Typst, relying on that parameter for styling.
@@ -16,6 +16,8 @@ uv add "fastapi[standard]"
 uv add typst
 ```
 
+This initializes a new Python project and installs FastAPI along with [Typst bindings](../from/python.md).
+
 ## Typst template
 
 First, we create a basic Typst file that will serve as a template:
@@ -26,6 +28,8 @@ First, we create a basic Typst file that will serve as a template:
 
 = Dynamic Typst report made with Python
 ```
+
+The `color` value is injected via `sys.inputs`, decoded from JSON, and used to set the page background color dynamically.
 
 ## FastAPI endpoint
 
@@ -57,7 +61,7 @@ def report(color: str):
     return FileResponse(Path(path_pdf))
 ```
 
-This endpoint has a `color` parameter that will be passed to the Typst template.
+The endpoint takes a `color` query parameter, passes it to Typst via `sys_inputs`, compiles the template into a PDF, and returns the file as a response.
 
 ## Run the server
 
@@ -67,11 +71,15 @@ Then we can try it with:
 uv run uvicorn main:app --reload
 ```
 
+Starts the FastAPI development server with auto-reload enabled.
+
 And in another process:
 
 ```
 curl "http://127.0.0.1:8000/report?color=FFC300" --output report.pdf
 ```
+
+This calls the endpoint and saves the generated PDF locally.
 
 This will save a `report.pdf` file that looks like this (yellow background because of the `#FFC300` color):
 
@@ -81,4 +89,4 @@ This will save a `report.pdf` file that looks like this (yellow background becau
 
 !!! tip
 
-      If you want to learn more about Python and Typst, check out [the dedicated tutorial](../from/python.md).
+    If you want to learn more about Python and Typst, check out [the dedicated tutorial](../from/python.md).
