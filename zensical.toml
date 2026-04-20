@@ -23,6 +23,10 @@ nav = [
     "crash-course/tips-and-tricks.md",
     "crash-course/project.md",
   ] },
+  { "Guides" = [
+    "guides/index.md",
+    "guides/how-to-customize-outline-in-typst.md",
+  ] },
   { "From languages" = [
     "from/index.md",
     "from/python.md",
