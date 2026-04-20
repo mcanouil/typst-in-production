@@ -56,6 +56,8 @@ quarto render report.qmd
 Quarto runs the R cell through `knitr`, hands the resulting Markdown to Pandoc, and compiles the final PDF with Typst.
 You should now have a `report.pdf` next to your source file.
 
+![Rendered PDF from the minimal R example.](../../images/quarto-minimal-R.png)
+
 ## Building a small report
 
 We now grow that skeleton into a real, parameterised sales report.
@@ -184,6 +186,8 @@ quarto render report.qmd -P region:South -P year:2025
 ```
 
 The title, the inline prose, the figure caption, and the table caption all update to match.
+
+![Rendered PDF from the parameterised R report.](../../images/quarto-report-R.png)
 
 ## Gotcha: fonts inside `ggplot2` plots
 

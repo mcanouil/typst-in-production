@@ -28,7 +28,7 @@ quarto render file.qmd
 
 This command creates `file.pdf`:
 
-![Rendered PDF output](../../images/quarto-1.png)
+![Rendered PDF output](../../images/quarto-minimal.png)
 
 ## Core features
 
@@ -61,7 +61,7 @@ Quarto is especially useful for three main reasons:
     ```
     ````
 
-    ![Parameterized rendering example](../../images/quarto-3.png)
+    ![Parameterized rendering example](../../images/quarto-parameterized.png)
 
 === "Other"
 
@@ -246,6 +246,10 @@ It is supported for `format: typst`, so the same `_brand.yml` can drive your web
 
 Inside the generated Typst, the brand colours are exposed as a dictionary named `brand-color` that you can reach from raw Typst blocks or from custom partials.
 See the [official brand.yml documentation](https://quarto.org/docs/authoring/brand.html) for the complete schema.
+
+!!! tip
+
+    For a worked example of threading `_brand.yml` colours through `ggplot2` figures and `gt` tables so the whole PDF follows a single palette, see [Brand-aware figures and tables in Quarto + Typst](https://mickael.canouil.fr/posts/2026-04-15-quarto-brand-figures-tables/).
 
 When the YAML-level knobs stop being enough, the next step is overriding a partial or shipping your own format extension.
 That is what [Custom Typst format](custom-format.md) is about.

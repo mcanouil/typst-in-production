@@ -60,6 +60,8 @@ quarto render report.qmd
 
 Quarto starts a Python kernel, runs the cell, hands the resulting Markdown to Pandoc, and compiles the final PDF with Typst. You should now have a `report.pdf` next to your source file.
 
+![Rendered PDF from the minimal Python example.](../../images/quarto-minimal-python.png)
+
 ## Building a small report
 
 We now grow that skeleton into a real, parameterised sales report. Each step below is a small addition to the previous `report.qmd`.
@@ -178,6 +180,8 @@ quarto render report.qmd -P region:South -P year:2025
 ```
 
 The inline prose updates to match. You can add conditional logic (different filters, different chart titles) in your cells, and every render will reflect the current values.
+
+![Rendered PDF from the parameterised Python report.](../../images/quarto-report-python.png)
 
 ## Gotcha: fuzzy figures in the PDF
 
