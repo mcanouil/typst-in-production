@@ -26,6 +26,8 @@ nav = [
   { "Guides" = [
     "guides/index.md",
     "guides/how-to-customize-outline-in-typst.md",
+    "guides/how-to-reuse-functions-and-components-in-typst.md",
+    "guides/how-to-run-typst-in-ci-cd.md",
   ] },
   { "From languages" = [
     "from/index.md",
