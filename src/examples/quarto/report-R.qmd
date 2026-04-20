@@ -5,6 +5,9 @@ date: 2026-04-19
 format:
   typst:
     keep-typ: true
+brand:
+  color:
+    background: "#f8f9fa"
 execute:
   echo: false
 params:
@@ -14,10 +17,8 @@ params:
 
 ```{r setup}
 #| include: false
-
 library(ggplot2)
 library(dplyr)
-library(gt)
 
 region <- params$region
 year <- params$year
@@ -30,14 +31,9 @@ Values below are quarterly totals in thousands.
 
 ## Sales by quarter
 
-```{r}
-#| label: fig-sales
-#| fig-cap: !expr paste("Quarterly sales for", region, "in", year, ".")
-#| fig-alt: Bar chart of quarterly sales, one bar per quarter.
-#| fig-format: svg
-#| fig-width: 6
-#| fig-height: 2.5
+::: {#fig-sales fig-alt="Bar chart of quarterly sales, one bar per quarter."}
 
+```{r}
 sales <- data.frame(
   quarter = c("Q1", "Q2", "Q3", "Q4"),
   total = c(120, 135, 158, 172)
@@ -50,19 +46,8 @@ ggplot(sales) +
   theme_minimal(base_size = 11)
 ```
 
+Quarterly sales for `{r} region` in `{r} year`.
+
+:::
+
 @fig-sales shows steady growth across the year.
-
-## Sales table
-
-```{r}
-#| label: tbl-sales
-#| tbl-cap: !expr paste("Quarterly totals for", region, ".")
-
-sales |>
-  gt::gt() |>
-  gt::cols_label(quarter = "Quarter", total = "Sales (k)") |>
-  gt::fmt_number(columns = "total", decimals = 0) |>
-  gt::tab_options(table.width = gt::pct(60))
-```
-
-@tbl-sales lists the same numbers shown in @fig-sales.

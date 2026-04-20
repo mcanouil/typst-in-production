@@ -6,6 +6,9 @@ date: 2026-04-19
 format:
   typst:
     keep-typ: true
+brand:
+  color:
+    background: "#f8f9fa"
 ---
 
 ## Overview
