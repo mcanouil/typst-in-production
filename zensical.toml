@@ -23,6 +23,12 @@ nav = [
     "crash-course/tips-and-tricks.md",
     "crash-course/project.md",
   ] },
+  { "Guides" = [
+    "guides/index.md",
+    "guides/how-to-customize-outline-in-typst.md",
+    "guides/how-to-reuse-functions-and-components-in-typst.md",
+    "guides/how-to-run-typst-in-ci-cd.md",
+  ] },
   { "From languages" = [
     "from/index.md",
     "from/python.md",
@@ -62,6 +68,8 @@ features = [
   "search.highlight",
   "navigation.prune",
 ]
+logo = "images/logo-tip.png"
+favicon = "images/favicon.png"
 
 [[project.theme.palette]]
 scheme = "default"
