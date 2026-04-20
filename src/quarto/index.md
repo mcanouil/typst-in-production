@@ -217,7 +217,7 @@ Setting them is the fastest way to customise output without touching a single `.
 | `fontsize`          | Base font size, for example `11pt`.                                                                                                                     |
 | `include-in-header` | Path to a `.typ` file whose contents are inserted into the generated `.typ` before the body. Useful for custom set rules without building an extension. |
 | `template-partials` | A list of partial filenames that override Quarto's defaults for one document. This is how you tweak `typst-show.typ` without creating a full extension. |
-| `keep-typ`          | When `true`, keeps the intermediate `.typ` file next to the PDF after rendering. Useful for inspecting the generated Typst source.                       |
+| `keep-typ`          | When `true`, keeps the intermediate `.typ` file next to the PDF after rendering. Useful for inspecting the generated Typst source.                      |
 
 A concrete example that sets page size, font, and drops in a custom heading colour:
 
@@ -249,7 +249,7 @@ See the [official brand.yml documentation](https://quarto.org/docs/authoring/bra
 
 !!! tip
 
-    For a worked example of threading `_brand.yml` colours through the whole PDF, in R (with `ggplot2` figures and `gt` tables) and in Python (with `plotnine` figures and `great_tables` tables), see the blog post [Brand-aware figures and tables in Quarto + Typst](https://mickael.canouil.fr/posts/2026-04-15-quarto-brand-figures-tables/).
+    For a worked example of threading `_brand.yml` colours and fonts, in R (with `ggplot2` figures and `gt` tables) and in Python (with `plotnine` figures and `great_tables` tables), see the blog post [Brand-aware figures and tables in Quarto + Typst](https://mickael.canouil.fr/posts/2026-04-15-quarto-brand-figures-tables/).
 
 When the YAML-level knobs stop being enough, the next step is overriding a partial or shipping your own format extension.
 That is what [Custom Typst format](custom-format.md) is about.
