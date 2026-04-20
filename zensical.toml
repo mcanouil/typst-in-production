@@ -62,6 +62,8 @@ features = [
   "search.highlight",
   "navigation.prune",
 ]
+logo = "images/logo-tip.png"
+favicon = "images/favicon.png"
 
 [[project.theme.palette]]
 scheme = "default"
