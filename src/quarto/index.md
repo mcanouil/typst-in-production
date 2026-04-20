@@ -249,7 +249,7 @@ See the [official brand.yml documentation](https://quarto.org/docs/authoring/bra
 
 !!! tip
 
-    For a worked example of threading `_brand.yml` colours through `ggplot2` figures and `gt` tables so the whole PDF follows a single palette, see [Brand-aware figures and tables in Quarto + Typst](https://mickael.canouil.fr/posts/2026-04-15-quarto-brand-figures-tables/).
+    For a worked example of threading `_brand.yml` colours through `ggplot2` or `plotnine` figures and `gt` or `great_tables` tables so the whole PDF follows a single palette, see the blog post [Brand-aware figures and tables in Quarto + Typst](https://mickael.canouil.fr/posts/2026-04-15-quarto-brand-figures-tables/).
 
 When the YAML-level knobs stop being enough, the next step is overriding a partial or shipping your own format extension.
 That is what [Custom Typst format](custom-format.md) is about.

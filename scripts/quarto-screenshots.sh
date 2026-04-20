@@ -182,6 +182,7 @@ process_qmd() (
 failed=()
 for qmd in "${qmd_files[@]}"; do
 	name="$(basename "$qmd" .qmd)"
+	cleanup_render_artefacts "$name"
 	if ! process_qmd "$qmd"; then
 		failed+=("$(basename "$qmd")")
 	fi

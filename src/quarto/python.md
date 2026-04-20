@@ -181,7 +181,9 @@ quarto render report.qmd -P region:South -P year:2025
 
 The inline prose updates to match. You can add conditional logic (different filters, different chart titles) in your cells, and every render will reflect the current values.
 
-![Rendered PDF from the parameterised Python report.](../../images/quarto-report-python.png)
+![Rendered PDF (page 1) from the parameterised Python report.](../../images/quarto-report-python-page-1.png)
+
+![Rendered PDF (page 2) from the parameterised Python report.](../../images/quarto-report-python-page-2.png)
 
 ## Gotcha: fuzzy figures in the PDF
 

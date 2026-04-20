@@ -15,5 +15,5 @@ screenshots = [
   "plotnine",
   "polars",
   "pyarrow",
-  "great_tables",
+  "great-tables",
 ]

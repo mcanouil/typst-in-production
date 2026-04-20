@@ -21,6 +21,7 @@ year: int = 2026
 
 import polars as pl
 from plotnine import ggplot, aes, geom_col, labs, theme_minimal
+from great_tables import GT
 ```
 
 ## Overview
@@ -53,3 +54,18 @@ sales = pl.DataFrame({
 ```
 
 @fig-sales shows steady growth across the year.
+
+## Sales table
+
+```{python}
+#| label: tbl-sales
+#| tbl-cap: Quarterly totals for the selected region.
+
+(
+    GT(sales)
+    .cols_label(quarter="Quarter", total="Sales (k)")
+    .fmt_number(columns="total", decimals=0)
+)
+```
+
+@tbl-sales lists the same numbers shown in @fig-sales.
